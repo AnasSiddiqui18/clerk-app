@@ -1,18 +1,11 @@
-import logo from "./logo.svg";
-import "./styles/App.css";
+import "./styles/index.css";
 
 function App() {
   return (
-    <div className="app">
-      <h1>Clerk + React</h1>
-      <img src={logo} alt="logo" />
-      <a
-        href="https://docs.clerk.dev/reference/clerk-react"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn more
-      </a>
+    <div className="app bg-gray-800 h-[calc(100vh-100px)] flex justify-center ">
+      <h1 className="text-white font-bold text-2xl">
+        Login Or Signup To Get A Cookie 🍪
+      </h1>
     </div>
   );
 }

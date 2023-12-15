@@ -1,29 +1,11 @@
-import { SignedIn, SignedOut, UserButton, useClerk } from "@clerk/clerk-react";
+import { SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import "../styles/Header.css";
-
-function SignUpButton() {
-  const clerk = useClerk();
-
-  return (
-    <button className="sign-up-btn" onClick={() => clerk.openSignUp({})}>
-      Sign up
-    </button>
-  );
-}
-
-function SignInButton() {
-  const clerk = useClerk();
-
-  return (
-    <button className="sign-in-btn" onClick={() => clerk.openSignIn({})}>
-      Sign in
-    </button>
-  );
-}
+import SignInButton from "./SignInButton";
+import SignUpButton from "./SignUpButton";
 
 function Header() {
   return (
-    <header>
+    <header className="bg-gray-800" id="header">
       <nav>
         <SignedOut>
           <ul>
