@@ -8,7 +8,7 @@ import ProtectedPage from "./components/ProtectedPage";
 
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
-const ClerwithRoutes = () => {
+const ClerkwithRoutes = () => {
   const navigate = useNavigate();
 
   return (
@@ -52,7 +52,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <ClerwithRoutes />
+        <ClerkwithRoutes />
       </BrowserRouter>
     </>
   );
