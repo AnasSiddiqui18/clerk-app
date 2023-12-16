@@ -1,7 +1,7 @@
 {
   "name": "clerk-react-starter",
   "version": "0.2.0",
-  "private": true,
+  "homepage": ".",
   "type": "module",
   "scripts": {
     "dev": "vite",
