@@ -1,12 +1,8 @@
-import { useClerk } from "@clerk/clerk-react";
-
 const SignUpButton = () => {
-  const clerk = useClerk();
-
   return (
-    <button className="sign-up-btn" onClick={() => clerk.openSignUp({})}>
-      Sign up
-    </button>
+    <a href="/sign-up" className="sign-in-btn text-white buttons">
+      Sign Up
+    </a>
   );
 };
 export default SignUpButton;

@@ -15,7 +15,7 @@ header li {
   display: block;
 }
 
-header button {
+.buttons {
   background: none;
   border: none;
   border-radius: 10px;
