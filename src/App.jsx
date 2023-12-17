@@ -39,7 +39,7 @@ const ClerkwithRoutes = () => {
         <Route
           path="/sign-up/*"
           element={
-            <div className="min-h-screen flex justify-center items-center bg-gray-500">
+            <div className="min-h-screen flex justify-center items-center bg-gray-800">
               <SignUp
                 routing="path"
                 redirectUrl={"/protected"}
