@@ -7,7 +7,7 @@ function Header() {
   return (
     <header className="bg-gray-800 flex justify-between" id="header">
       <img
-        src="/logo.png"
+        src="logo.png"
         alt="no-img"
         className="bg-white w-16 h-16 rounded-full"
       />
