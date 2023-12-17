@@ -5,6 +5,7 @@ import { ClerkProvider, SignIn, SignUp } from "@clerk/clerk-react";
 import { BrowserRouter, Route, Routes, useNavigate } from "react-router-dom";
 import Home from "./components/Home";
 import ProtectedPage from "./components/ProtectedPage";
+import { dark } from "@clerk/themes";
 
 const clerkPubKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY;
 
@@ -12,7 +13,11 @@ const ClerkwithRoutes = () => {
   const navigate = useNavigate();
 
   return (
-    <ClerkProvider publishableKey={clerkPubKey} navigate={(to) => navigate(to)}>
+    <ClerkProvider
+      publishableKey={clerkPubKey}
+      navigate={(to) => navigate(to)}
+      appearance={dark}
+    >
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="" element={<Home />} />
@@ -26,6 +31,7 @@ const ClerkwithRoutes = () => {
                 routing="path"
                 redirectUrl={"/protected"}
                 path="/sign-in"
+                signUpUrl="/sign-up"
               />
             </div>
           }
@@ -38,6 +44,7 @@ const ClerkwithRoutes = () => {
                 routing="path"
                 redirectUrl={"/protected"}
                 path="/sign-up"
+                signInUrl="/sign-in"
               />
             </div>
           }
