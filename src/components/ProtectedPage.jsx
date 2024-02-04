@@ -1,18 +1,12 @@
-import { useAuth } from "@clerk/clerk-react";
-import { useEffect } from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import Header from "./Header";
 
-function ProtectedPage() {
-  const { isSignedIn } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!isSignedIn) navigate("/sign-in");
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  return isSignedIn && <Outlet />;
-}
-
-export default ProtectedPage;
+export const ProtectedPage = () => {
+  return (
+    <>
+      <Header />
+      <div className="bg-gray-700 h-[calc(100vh-100px)] text-center text-white text-3xl">
+        <h1 className="uppercase">this is the profile section</h1>
+      </div>
+    </>
+  );
+};
